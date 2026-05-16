@@ -1,6 +1,6 @@
 #  Gerenciador de Produtos
 
-Projeto desenvolvido como atividade prática do **Curso Técnico em Análise e Desenvolvimento de Sistemas (ADS)**.
+Projeto desenvolvido como atividade prática do Curso Técnico em Análise e Desenvolvimento de Sistemas (ADS).
 
 ---
 
@@ -17,9 +17,9 @@ Projeto desenvolvido como atividade prática do **Curso Técnico em Análise e D
 
 ##  Sobre o Projeto
 
-O **Gerenciador de Produtos** é uma aplicação web fullstack para controle de estoque. O sistema permite cadastrar produtos, fornecedores e registrar vendas, tudo por meio de uma interface web moderna.
+O Gerenciador de Produtos é uma aplicação web fullstack para controle de estoque. O sistema permite cadastrar produtos, fornecedores e registrar vendas, tudo por meio de uma interface web moderna.
 
-Desenvolvido com **React + Vite** no frontend e **Python** no backend, com persistência de dados em banco **SQL**.
+Desenvolvido com React + Vite no frontend e Python no backend, com persistência de dados em banco SQL.
 
 ---
 
