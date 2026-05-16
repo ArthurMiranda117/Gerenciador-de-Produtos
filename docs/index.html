@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerenciador de Produtos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --text: #6b6375;
+      --text-h: #08060d;
+      --bg: #fff;
+      --border: #e5e4e7;
+      --accent: #aa3bff;
+      --accent-bg: rgba(170, 59, 255, 0.1);
+      --accent-border: rgba(170, 59, 255, 0.5);
+      --shadow: rgba(0,0,0,0.1) 0 10px 15px -3px, rgba(0,0,0,0.05) 0 4px 6px -2px;
+      --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+
+      font: 18px/145% var(--sans);
+      letter-spacing: 0.18px;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #9ca3af;
+        --text-h: #f3f4f6;
+        --bg: #16171d;
+        --border: #2e303a;
+        --accent: #c084fc;
+        --accent-bg: rgba(192, 132, 252, 0.15);
+        --accent-border: rgba(192, 132, 252, 0.5);
+        --shadow: rgba(0,0,0,0.4) 0 10px 15px -3px, rgba(0,0,0,0.25) 0 4px 6px -2px;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body { background: var(--bg); }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1f2028;
+      padding: 20px 30px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      list-style: none;
+    }
+
+    .btn {
+      background-color: #16171d;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #c084fc;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+
+    .btn:hover { opacity: 0.8; }
+
+    /* Wrapper */
+    .wrapper {
+      width: 1126px;
+      max-width: 100%;
+      margin: 0 auto;
+      border-inline: 1px solid var(--border);
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 60px 40px 40px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: var(--accent);
+      background: var(--accent-bg);
+      border: 1px solid var(--accent-border);
+      border-radius: 100px;
+      padding: 4px 14px;
+      margin-bottom: 24px;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 500;
+      letter-spacing: -1.68px;
+      color: #c084fc;
+      margin: 16px 0 24px;
+    }
+
+    @media (max-width: 1024px) {
+      h1 { font-size: 36px; }
+    }
+
+    .hero p {
+      color: var(--text);
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-accent {
+      background-color: #aa3bff;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+
+    .btn-accent:hover { opacity: 0.85; }
+
+    /* Sections */
+    section {
+      padding: 50px 40px;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 500;
+      color: #c084fc;
+      letter-spacing: -0.24px;
+      margin-bottom: 32px;
+    }
+
+    /* Tech table */
+    table {
+      color: #c084fc;
+      padding: 20px;
+      margin: 0 auto;
+      box-shadow: 0 0 15px black;
+      width: 70%;
+      border-collapse: collapse;
+      font-family: 'Roboto', sans-serif;
+      background-color: #1f2028;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th {
+      color: #c084fc;
+      padding: 12px 16px;
+      border: 1px solid #000;
+    }
+
+    tr, td {
+      color: #ffffff;
+      border: 1px solid #000;
+      padding: 10px 16px;
+    }
+
+    @media (max-width: 768px) {
+      table { width: 95%; }
+    }
+
+    /* Features */
+    .features-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .feature-card {
+      background-color: #1f2028;
+      border-radius: 15px;
+      padding: 30px 28px;
+      width: 260px;
+      box-shadow: 0 0 15px #080808;
+      text-align: left;
+    }
+
+    .feature-card h3 {
+      color: #c084fc;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .feature-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .feature-card ul li {
+      color: #ffffff;
+      font-size: 0.88rem;
+      border: 1px solid #000;
+      border-radius: 6px;
+      padding: 6px 10px;
+    }
+
+    /* Author */
+    .author-box {
+      background-color: #1f2028;
+      border-radius: 15px;
+      padding: 36px 40px;
+      box-shadow: 0 0 15px #080808;
+      display: inline-flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .author-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #aa3bff;
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .author-info { text-align: left; }
+
+    .author-name {
+      color: #c084fc;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .author-role {
+      color: #9ca3af;
+      font-size: 0.85rem;
+      margin-bottom: 14px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 24px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text);
+      border-top: 1px solid var(--border);
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#tecnologias" class="btn">Tecnologias</a></li>
+      <li><a href="#funcionalidades" class="btn">Funcionalidades</a></li>
+      <li><a href="https://github.com/ArthurMiranda117/Gerenciador-de-Produtos" target="_blank" class="btn">GitHub →</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrapper">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="badge">Projeto Acadêmico · Curso Técnico ADS</div>
+      <h1>Gerenciador de Produtos</h1>
+      <p>Sistema web fullstack para controle de estoque — cadastre produtos, gerencie fornecedores e registre vendas em um só lugar.</p>
+      <div class="hero-actions">
+        <a href="https://github.com/ArthurMiranda117/Gerenciador-de-Produtos" target="_blank" class="btn-accent">Ver Repositório</a>
+        <a href="#funcionalidades" class="btn">Funcionalidades</a>
+      </div>
+    </div>
+
+    <!-- Tecnologias -->
+    <section id="tecnologias">
+      <h2>Tecnologias Utilizadas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Camada</th>
+            <th>Tecnologia</th>
+            <th>Descrição</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Frontend</td><td>React + Vite</td><td>Interface do usuário</td></tr>
+          <tr><td>Backend</td><td>Python</td><td>API REST</td></tr>
+          <tr><td>Banco de Dados</td><td>SQL</td><td>Persistência de dados</td></tr>
+          <tr><td>Versionamento</td><td>Git + GitHub</td><td>Controle de versão</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section id="funcionalidades">
+      <h2>Funcionalidades</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>📦 Produtos</h3>
+          <ul>
+            <li>Cadastrar produto</li>
+            <li>Listar produtos</li>
+            <li>Editar produto</li>
+            <li>Excluir produto</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3>🏭 Fornecedores</h3>
+          <ul>
+            <li>Cadastrar fornecedor</li>
+            <li>Listar fornecedores</li>
+            <li>Editar fornecedor</li>
+            <li>Excluir fornecedor</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3>💰 Vendas</h3>
+          <ul>
+            <li>Registrar venda</li>
+            <li>Listar vendas</li>
+            <li>Editar venda</li>
+            <li>Excluir venda</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Autor -->
+    <section>
+      <h2>Autor</h2>
+      <div class="author-box">
+        <div class="author-avatar">A</div>
+        <div class="author-info">
+          <div class="author-name">Arthur De Miranda Benis</div>
+          <div class="author-role">Curso Técnico em Análise e Desenvolvimento de Sistemas</div>
+          <a href="https://github.com/ArthurMiranda117" target="_blank" class="btn">GitHub →</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Desenvolvido por Arthur De Miranda Benis
+    </footer>
+
+  </div>
+
+</body>
+</html>
