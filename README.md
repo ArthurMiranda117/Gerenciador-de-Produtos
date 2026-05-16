@@ -142,15 +142,5 @@ GerenciadorProdutos/
 
 [![GitHub](https://img.shields.io/badge/GitHub-ArthurMiranda117-181717?style=flat&logo=github)](https://github.com/ArthurMiranda117)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Acesse%20o%20site-222?style=flat&logo=github)](https://ArthurMiranda117.github.io/Gerenciador-de-Produtos/)
-```
 
----
-
-## 👤 Autor
-
-Desenvolvido por **Arthur De Miranda Benis**  
-Curso Técnico em Análise e Desenvolvimento de Sistemas
-
-[![GitHub](https://img.shields.io/badge/GitHub-ArthurMiranda117-181717?style=flat&logo=github)](https://github.com/ArthurMiranda117)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Acesse%20o%20site-222?style=flat&logo=github)](https://ArthurMiranda117.github.io/Gerenciador-de-Produtos/)
 ```
