@@ -1,10 +1,10 @@
-# 📦 Gerenciador de Produtos
+#  Gerenciador de Produtos
 
 Projeto desenvolvido como atividade prática do **Curso Técnico em Análise e Desenvolvimento de Sistemas (ADS)**.
 
 ---
 
-## 📋 Índice
+##  Índice
 
 - [Sobre o Projeto](#sobre-o-projeto)
 - [Funcionalidades](#funcionalidades)
@@ -15,7 +15,7 @@ Projeto desenvolvido como atividade prática do **Curso Técnico em Análise e D
 
 ---
 
-## 📖 Sobre o Projeto
+##  Sobre o Projeto
 
 O **Gerenciador de Produtos** é uma aplicação web fullstack para controle de estoque. O sistema permite cadastrar produtos, fornecedores e registrar vendas, tudo por meio de uma interface web moderna.
 
@@ -23,7 +23,7 @@ Desenvolvido com **React + Vite** no frontend e **Python** no backend, com persi
 
 ---
 
-## ✅ Funcionalidades
+##  Funcionalidades
 
 ### Produtos
 - [x] Cadastrar produto
@@ -56,7 +56,7 @@ Desenvolvido com **React + Vite** no frontend e **Python** no backend, com persi
 
 ---
 
-## ⚙️ Como Executar
+##  Como Executar
 
 ### Pré-requisitos
 
@@ -108,7 +108,7 @@ Acesse em: `http://localhost:5173`
 
 ---
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 GerenciadorProdutos/
@@ -140,13 +140,6 @@ GerenciadorProdutos/
 ├── index.html
 └── package.json
 ```
-
----
-
-## 👤 Autor
-
-Desenvolvido por **Arthur De Miranda Benis**  
-Curso Técnico em Análise e Desenvolvimento de Sistemas
 
 [![GitHub](https://img.shields.io/badge/GitHub-ArthurMiranda117-181717?style=flat&logo=github)](https://github.com/ArthurMiranda117)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Acesse%20o%20site-222?style=flat&logo=github)](https://ArthurMiranda117.github.io/Gerenciador-de-Produtos/)
