@@ -14,3 +14,30 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+GerenciadorProdutos/
+├── api/                        # Backend em Python
+│   ├── controllers/            # Lógica de cada módulo
+│   │   ├── fornecedor_controller.py
+│   │   ├── produto_controller.py
+│   │   └── venda_controller.py
+│   ├── models/                 # Conexão e modelos do banco
+│   │   ├── db_connect.py
+│   │   ├── fornecedor.py
+│   │   ├── produto.py
+│   │   └── venda.py
+│   ├── api.py                  # Arquivo principal da API
+│   └── .env                    # Variáveis de ambiente
+├── src/                        # Frontend em React
+│   ├── assets/js/              # Componentes reutilizáveis
+│   │   ├── ModalAviso.jsx
+│   │   └── ModalConfirmacao.jsx
+│   ├── pages/                  # Páginas da aplicação
+│   │   ├── fornecedor/
+│   │   ├── produto/
+│   │   └── venda/
+│   ├── App.jsx
+│   └── main.jsx
+├── db_produtos.sql             # Script de criação do banco
+├── index.html
+└── package.json
