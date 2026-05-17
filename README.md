@@ -59,9 +59,9 @@ Desenvolvido com React + Vite no frontend e Python no backend, com persistência
 
 ### Pré-requisitos
 
-- [Node.js](https://nodejs.org/) instalado
-- [Python 3](https://www.python.org/) instalado
-- Banco de dados SQL configurado (MySQL ou similar)
+- [Node.js] instalado
+- [Python 3] instalado
+- Banco de dados SQL configurado
 
 ### Passo a passo
 
