@@ -44,7 +44,7 @@ Desenvolvido com React + Vite no frontend e Python no backend, com persistência
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 | Camada | Tecnologia |
 |--------|------------|
