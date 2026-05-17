@@ -11,7 +11,6 @@ Projeto desenvolvido como atividade prática do Curso Técnico em Análise e Des
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Como Executar](#como-executar)
 - [Estrutura do Projeto](#estrutura-do-projeto)
-- [Autor](#autor)
 
 ---
 
