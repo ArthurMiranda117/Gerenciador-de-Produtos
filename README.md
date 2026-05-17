@@ -138,10 +138,6 @@ GerenciadorProdutos/
 ├── db_produtos.sql             # Script de criação do banco
 ├── index.html
 └── package.json
-
+```
 [![GitHub](https://img.shields.io/badge/GitHub-ArthurMiranda117-181717?style=flat&logo=github)](https://github.com/ArthurMiranda117)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Acesse%20o%20site-222?style=flat&logo=github)](https://ArthurMiranda117.github.io/Gerenciador-de-Produtos/)
-
-```
-
-https://arthurmiranda117.github.io/Gerenciador-de-Produtos/
